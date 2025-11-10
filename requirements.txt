@@ -8,3 +8,4 @@ scipy
 pymc
 arviz
 scikit-learn
+pickle
