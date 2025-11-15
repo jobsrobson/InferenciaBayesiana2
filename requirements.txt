@@ -9,3 +9,4 @@ scipy
 pymc
 arviz
 scikit-learn
+statsmodels
