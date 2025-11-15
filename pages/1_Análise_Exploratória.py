@@ -30,19 +30,6 @@ st.set_page_config(
 # Cores padrão
 colors = {'2022': '#002156', '2023': '#ffbb3c', '2024': '#ec152f'}
 
-# CSS customizado
-st.markdown("""
-    <style>
-        /* Diminui a largura da sidebar */
-        [data-testid="stSidebar"] {
-            width: 300px !important;      /* largura fixa */
-            min-width: 300px !important;
-            max-width: 300px !important;
-        }
-
-    </style>
-""", unsafe_allow_html=True)
-
 def formatar_numero_br(valor):
     return f"{valor:,.0f}".replace(",", ".")
 
