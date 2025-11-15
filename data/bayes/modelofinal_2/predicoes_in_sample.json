@@ -1,0 +1,326 @@
+[
+  {
+    "ano": 2022,
+    "mes": "JANEIRO",
+    "mes_num": 1,
+    "ocor_atend": 15523,
+    "y_pred_mediana": 14359.5,
+    "y_pred_hdi_low": 6594.0,
+    "y_pred_hdi_high": 24088.0
+  },
+  {
+    "ano": 2022,
+    "mes": "FEVEREIRO",
+    "mes_num": 2,
+    "ocor_atend": 16317,
+    "y_pred_mediana": 15128.5,
+    "y_pred_hdi_low": 6486.0,
+    "y_pred_hdi_high": 24846.0
+  },
+  {
+    "ano": 2022,
+    "mes": "MARÇO",
+    "mes_num": 3,
+    "ocor_atend": 17875,
+    "y_pred_mediana": 16014.0,
+    "y_pred_hdi_low": 7510.0,
+    "y_pred_hdi_high": 27046.0
+  },
+  {
+    "ano": 2022,
+    "mes": "ABRIL",
+    "mes_num": 4,
+    "ocor_atend": 17677,
+    "y_pred_mediana": 15059.5,
+    "y_pred_hdi_low": 7230.0,
+    "y_pred_hdi_high": 25575.0
+  },
+  {
+    "ano": 2022,
+    "mes": "MAIO",
+    "mes_num": 5,
+    "ocor_atend": 16647,
+    "y_pred_mediana": 14156.5,
+    "y_pred_hdi_low": 6310.0,
+    "y_pred_hdi_high": 23630.0
+  },
+  {
+    "ano": 2022,
+    "mes": "JUNHO",
+    "mes_num": 6,
+    "ocor_atend": 15672,
+    "y_pred_mediana": 14338.0,
+    "y_pred_hdi_low": 6853.0,
+    "y_pred_hdi_high": 24448.0
+  },
+  {
+    "ano": 2022,
+    "mes": "JULHO",
+    "mes_num": 7,
+    "ocor_atend": 15913,
+    "y_pred_mediana": 17778.0,
+    "y_pred_hdi_low": 7467.0,
+    "y_pred_hdi_high": 30065.0
+  },
+  {
+    "ano": 2022,
+    "mes": "AGOSTO",
+    "mes_num": 8,
+    "ocor_atend": 17413,
+    "y_pred_mediana": 22594.0,
+    "y_pred_hdi_low": 8144.0,
+    "y_pred_hdi_high": 44284.0
+  },
+  {
+    "ano": 2022,
+    "mes": "SETEMBRO",
+    "mes_num": 9,
+    "ocor_atend": 16478,
+    "y_pred_mediana": 14413.5,
+    "y_pred_hdi_low": 6389.0,
+    "y_pred_hdi_high": 23835.0
+  },
+  {
+    "ano": 2022,
+    "mes": "OUTUBRO",
+    "mes_num": 10,
+    "ocor_atend": 16877,
+    "y_pred_mediana": 14682.5,
+    "y_pred_hdi_low": 6961.0,
+    "y_pred_hdi_high": 24800.0
+  },
+  {
+    "ano": 2022,
+    "mes": "NOVEMBRO",
+    "mes_num": 11,
+    "ocor_atend": 15207,
+    "y_pred_mediana": 14186.5,
+    "y_pred_hdi_low": 6359.0,
+    "y_pred_hdi_high": 23617.0
+  },
+  {
+    "ano": 2022,
+    "mes": "DEZEMBRO",
+    "mes_num": 12,
+    "ocor_atend": 15578,
+    "y_pred_mediana": 14734.5,
+    "y_pred_hdi_low": 6642.0,
+    "y_pred_hdi_high": 24518.0
+  },
+  {
+    "ano": 2023,
+    "mes": "JANEIRO",
+    "mes_num": 1,
+    "ocor_atend": 14866,
+    "y_pred_mediana": 13565.5,
+    "y_pred_hdi_low": 6455.0,
+    "y_pred_hdi_high": 22910.0
+  },
+  {
+    "ano": 2023,
+    "mes": "FEVEREIRO",
+    "mes_num": 2,
+    "ocor_atend": 13151,
+    "y_pred_mediana": 14424.5,
+    "y_pred_hdi_low": 6342.0,
+    "y_pred_hdi_high": 23730.0
+  },
+  {
+    "ano": 2023,
+    "mes": "MARÇO",
+    "mes_num": 3,
+    "ocor_atend": 16484,
+    "y_pred_mediana": 16137.0,
+    "y_pred_hdi_low": 6893.0,
+    "y_pred_hdi_high": 27409.0
+  },
+  {
+    "ano": 2023,
+    "mes": "ABRIL",
+    "mes_num": 4,
+    "ocor_atend": 15078,
+    "y_pred_mediana": 14224.5,
+    "y_pred_hdi_low": 6651.0,
+    "y_pred_hdi_high": 23518.0
+  },
+  {
+    "ano": 2023,
+    "mes": "MAIO",
+    "mes_num": 5,
+    "ocor_atend": 15103,
+    "y_pred_mediana": 13950.0,
+    "y_pred_hdi_low": 6452.0,
+    "y_pred_hdi_high": 23273.0
+  },
+  {
+    "ano": 2023,
+    "mes": "JUNHO",
+    "mes_num": 6,
+    "ocor_atend": 14615,
+    "y_pred_mediana": 13588.0,
+    "y_pred_hdi_low": 6020.0,
+    "y_pred_hdi_high": 22503.0
+  },
+  {
+    "ano": 2023,
+    "mes": "JULHO",
+    "mes_num": 7,
+    "ocor_atend": 14460,
+    "y_pred_mediana": 13689.5,
+    "y_pred_hdi_low": 5874.0,
+    "y_pred_hdi_high": 22540.0
+  },
+  {
+    "ano": 2023,
+    "mes": "AGOSTO",
+    "mes_num": 8,
+    "ocor_atend": 15181,
+    "y_pred_mediana": 14106.5,
+    "y_pred_hdi_low": 6610.0,
+    "y_pred_hdi_high": 23301.0
+  },
+  {
+    "ano": 2023,
+    "mes": "SETEMBRO",
+    "mes_num": 9,
+    "ocor_atend": 13667,
+    "y_pred_mediana": 13547.0,
+    "y_pred_hdi_low": 5967.0,
+    "y_pred_hdi_high": 22439.0
+  },
+  {
+    "ano": 2023,
+    "mes": "OUTUBRO",
+    "mes_num": 10,
+    "ocor_atend": 13590,
+    "y_pred_mediana": 13594.0,
+    "y_pred_hdi_low": 6251.0,
+    "y_pred_hdi_high": 22734.0
+  },
+  {
+    "ano": 2023,
+    "mes": "NOVEMBRO",
+    "mes_num": 11,
+    "ocor_atend": 12976,
+    "y_pred_mediana": 13266.5,
+    "y_pred_hdi_low": 6392.0,
+    "y_pred_hdi_high": 22814.0
+  },
+  {
+    "ano": 2023,
+    "mes": "DEZEMBRO",
+    "mes_num": 12,
+    "ocor_atend": 12822,
+    "y_pred_mediana": 13796.0,
+    "y_pred_hdi_low": 6022.0,
+    "y_pred_hdi_high": 22940.0
+  },
+  {
+    "ano": 2024,
+    "mes": "JANEIRO",
+    "mes_num": 1,
+    "ocor_atend": 13207,
+    "y_pred_mediana": 12655.0,
+    "y_pred_hdi_low": 5695.0,
+    "y_pred_hdi_high": 21364.0
+  },
+  {
+    "ano": 2024,
+    "mes": "FEVEREIRO",
+    "mes_num": 2,
+    "ocor_atend": 25459,
+    "y_pred_mediana": 15621.5,
+    "y_pred_hdi_low": 6823.0,
+    "y_pred_hdi_high": 26636.0
+  },
+  {
+    "ano": 2024,
+    "mes": "MARÇO",
+    "mes_num": 3,
+    "ocor_atend": 13986,
+    "y_pred_mediana": 13636.0,
+    "y_pred_hdi_low": 6377.0,
+    "y_pred_hdi_high": 22963.0
+  },
+  {
+    "ano": 2024,
+    "mes": "ABRIL",
+    "mes_num": 4,
+    "ocor_atend": 12555,
+    "y_pred_mediana": 13393.0,
+    "y_pred_hdi_low": 5942.0,
+    "y_pred_hdi_high": 22344.0
+  },
+  {
+    "ano": 2024,
+    "mes": "MAIO",
+    "mes_num": 5,
+    "ocor_atend": 13008,
+    "y_pred_mediana": 13104.0,
+    "y_pred_hdi_low": 5553.0,
+    "y_pred_hdi_high": 21913.0
+  },
+  {
+    "ano": 2024,
+    "mes": "JUNHO",
+    "mes_num": 6,
+    "ocor_atend": 12867,
+    "y_pred_mediana": 13014.0,
+    "y_pred_hdi_low": 6059.0,
+    "y_pred_hdi_high": 21754.0
+  },
+  {
+    "ano": 2024,
+    "mes": "JULHO",
+    "mes_num": 7,
+    "ocor_atend": 12995,
+    "y_pred_mediana": 13369.5,
+    "y_pred_hdi_low": 6169.0,
+    "y_pred_hdi_high": 22229.0
+  },
+  {
+    "ano": 2024,
+    "mes": "AGOSTO",
+    "mes_num": 8,
+    "ocor_atend": 13734,
+    "y_pred_mediana": 13372.5,
+    "y_pred_hdi_low": 5827.0,
+    "y_pred_hdi_high": 22051.0
+  },
+  {
+    "ano": 2024,
+    "mes": "SETEMBRO",
+    "mes_num": 9,
+    "ocor_atend": 8014,
+    "y_pred_mediana": 12164.0,
+    "y_pred_hdi_low": 5280.0,
+    "y_pred_hdi_high": 20287.0
+  },
+  {
+    "ano": 2024,
+    "mes": "OUTUBRO",
+    "mes_num": 10,
+    "ocor_atend": 10734,
+    "y_pred_mediana": 13078.5,
+    "y_pred_hdi_low": 5912.0,
+    "y_pred_hdi_high": 22117.0
+  },
+  {
+    "ano": 2024,
+    "mes": "NOVEMBRO",
+    "mes_num": 11,
+    "ocor_atend": 10235,
+    "y_pred_mediana": 12579.0,
+    "y_pred_hdi_low": 5477.0,
+    "y_pred_hdi_high": 20808.0
+  },
+  {
+    "ano": 2024,
+    "mes": "DEZEMBRO",
+    "mes_num": 12,
+    "ocor_atend": 11091,
+    "y_pred_mediana": 12842.5,
+    "y_pred_hdi_low": 6012.0,
+    "y_pred_hdi_high": 21777.0
+  }
+]

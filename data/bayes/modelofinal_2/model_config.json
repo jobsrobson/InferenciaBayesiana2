@@ -1,0 +1,24 @@
+{
+  "family": "NegativeBinomial",
+  "link": "log",
+  "formula": "ocor_atend ~ 1 + (1 | mes) + (1 | ano) + covariaveis_padronizadas",
+  "priors": {
+    "alpha0": "Normal(9.8, 1.0)",
+    "sigma_mes": "Exponential(2.0)",
+    "sigma_ano": "Exponential(2.0)",
+    "alpha_nb": "Exponential(1.0)",
+    "beta": "Normal(0, 0.5) em covariáveis z-score"
+  },
+  "covariate_metadata": {
+    "covariate_cols": [
+      "arm_branc_apr"
+    ],
+    "means": {
+      "arm_branc_apr": 306.1111111111111
+    },
+    "stds": {
+      "arm_branc_apr": 111.34086088039422
+    }
+  },
+  "descricao": "Modelo bayesiano hierárquico NegBin com efeitos aleatórios de mês e ano, e covariáveis de apreensões padronizadas (quando presentes)."
+}

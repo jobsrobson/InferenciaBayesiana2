@@ -357,7 +357,7 @@ if tipo_analise == "Análise Exploratória":
     st.divider()
     st.markdown("<br>", unsafe_allow_html=True)
     st.markdown("#### Acidentes de Trânsito", unsafe_allow_html=True)
-    st.info("Apenas acidentes de trânsito atendidos pela PMDF no triênio.", icon=":material/info:")
+    st.markdown("Apenas acidentes de trânsito atendidos pela PMDF no triênio.", unsafe_allow_html=True)
 
     # MÉTRICAS
     col1, col2, col3, col4 = st.columns(4, border=True, gap="small")
@@ -496,7 +496,7 @@ if tipo_analise == "Análise Exploratória":
     st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown("#### Crimes de Violência Doméstica", unsafe_allow_html=True)
-    st.info("Análise dos crimes de Violência Doméstica registrados pela PMDF no triênio.", icon=":material/info:")
+    st.markdown("Análise dos crimes de Violência Doméstica registrados pela PMDF no triênio.", unsafe_allow_html=True)
 
     # MÉTRICAS
     col1, col2 = st.columns(2, border=True, gap="small")
@@ -600,7 +600,8 @@ if tipo_analise == "Análise Exploratória":
     st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown("#### Crimes Patrimoniais", unsafe_allow_html=True)
-    st.info("Análise dos crimes patrimoniais registrados pela PMDF no triênio.", icon=":material/info:")
+    st.markdown("Análise dos crimes patrimoniais registrados pela PMDF no triênio.", unsafe_allow_html=True)
+    
 
     # MÉTRICAS
     col1, col2, col3, col4 = st.columns(4, border=True, gap="small")
@@ -646,8 +647,8 @@ if tipo_analise == "Análise Exploratória":
             margin=dict(t=20, b=50, l=50, r=00),
             yaxis=dict(range=[0, 600]),
             legend=dict(
-                x=1,  # Posição horizontal da legenda (0 = esquerda, 1 = direita)
-                y=1,  # Posição vertical da legenda (0 = inferior, 1 = superior)
+                x=1,
+                y=1,
                 bgcolor='rgba(255,255,255,0.5)',
                 bordercolor='lightgray',
                 borderwidth=1
@@ -686,8 +687,8 @@ if tipo_analise == "Análise Exploratória":
             margin=dict(t=20, b=50, l=50, r=00),
             yaxis=dict(range=[0, 600]),
             legend=dict(
-                x=1,  # Posição horizontal da legenda (0 = esquerda, 1 = direita)
-                y=1,  # Posição vertical da legenda (0 = inferior, 1 = superior)
+                x=1,
+                y=1,
                 bgcolor='rgba(255,255,255,0.5)',
                 bordercolor='lightgray',
                 borderwidth=1
@@ -771,6 +772,7 @@ if tipo_analise == "Análise Exploratória":
 
     st.markdown("<br><br>", unsafe_allow_html=True)
     st.markdown("##### Detalhamento dos Crimes Patrimoniais - Furtos", unsafe_allow_html=True)
+    st.info("Furtos a Transeuntes não foram divulgados pela PMDF em 2022.", icon=":material/info:")
 
     # MÉTRICAS
     col1, col2, col3, col4, col5 = st.columns(5, border=True, gap="small")
@@ -973,7 +975,7 @@ if tipo_analise == "Análise Exploratória":
     st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown("#### Apreensões de Armas e Drogas", unsafe_allow_html=True)
-    st.info("Análise das apreensões de armas e drogas realizadas pela PMDF no triênio.", icon=":material/info:")
+    st.markdown("Análise das apreensões de armas e drogas realizadas pela PMDF no triênio.", unsafe_allow_html=True)
 
     # MÉTRICAS
     col1, col2, col3, col4 = st.columns(4, border=True, gap="small")
@@ -1077,7 +1079,7 @@ if tipo_analise == "Análise Exploratória":
     st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown("#### Flagrantes, Prisões e TCOs", unsafe_allow_html=True)
-    st.info("Análise dos flagrantes, prisões e TCOs (Termos Circunstanciados de Ocorrência) realizados pela PMDF no triênio.", icon=":material/info:")
+    st.markdown("Análise dos flagrantes, prisões e TCOs (Termos Circunstanciados de Ocorrência) realizados pela PMDF no triênio.", unsafe_allow_html=True)
 
     # MÉTRICAS
     col1, col2, col3, col4, col5 = st.columns(5, border=True, gap="small")
@@ -1266,32 +1268,42 @@ elif tipo_analise == "Análise de Correlações":
             # Mostrar o DataFrame
             st.dataframe(corr_df, hide_index=True, use_container_width=True)
 
-        with st.container(border=True):
-            # Criar DataFrame com explicações sobre os níveis de correlação
-            explicacoes = pd.DataFrame({
-                "Nível de Correlação": [
-                    "Correlação Forte Positiva",
-                    "Correlação Moderada Positiva",
-                    "Correlação Fraca Positiva",
-                    "Correlação Fraca Negativa",
-                    "Correlação Moderada Negativa",
-                    "Correlação Forte Negativa",
-                    "Sem Correlação"
-                ],
-                "Descrição": [
-                    "As variáveis aumentam juntas (0.7 a 1.0).",
-                    "As variáveis tendem a aumentar juntas (0.3 a 0.7).",
-                    "Pequena tendência de aumento conjunto (0.0 a 0.3).",
-                    "Pequena tendência de uma variável aumentar enquanto a outra diminui (-0.3 a 0.0).",
-                    "As variáveis tendem a se mover em direções opostas (-0.7 a -0.3).",
-                    "Uma variável aumenta enquanto a outra diminui significativamente (-1.0 a -0.7).",
-                    "Não há relação linear aparente entre as variáveis (próximo de 0)."
-                ]
-            })
+        with st.expander("Explicação dos Níveis de Correlação", icon=":material/info:", expanded=True):
+            st.markdown(""" 
+                        Os dados revelam padrões nítidos de associação entre diferentes tipos de crimes violentos. A correlação mais intensa ocorre entre **Violência Doméstica** e **Vias de Fato** (0,96), indicando que esses eventos tendem a ocorrer conjuntamente e provavelmente refletem dinâmicas semelhantes de conflito interpessoal. Em seguida, destaca-se a forte relação entre **Tentativa de Feminicídio** e **Tentativa de Homicídio** (0,66), o que sugere que ambos emergem de contextos de violência letal mal consumada, compartilhando um mesmo perfil de escalada agressiva.
 
-            # Exibir o DataFrame no Streamlit
-            st.markdown("<b>Explicação dos Níveis de Correlação</b>", unsafe_allow_html=True)
-            st.dataframe(explicacoes, use_container_width=True, hide_index=True)
+                        Outro ponto relevante é que **Vias de Fato** apresenta correlação consistente com várias categorias — especialmente **Tentativa de Homicídio** e **Tentativa de Feminicídio** — reforçando sua natureza como etapa preliminar ou manifestação menos grave dentro de um continuum de violência. Já crimes como **Homicídios**, **Feminicídios** e **Homicídios Culposos** mostram correlações mais discretas com as demais variáveis, indicando dinâmicas menos previsíveis ou mais independentes no conjunto analisado.
+
+                        No geral, os padrões sugerem que violência doméstica e conflitos físicos de menor gravidade são altamente interligados e constituem importantes indicadores de risco para ocorrências mais severas. Essa interdependência pode orientar políticas de prevenção e atuação mais integrada entre órgãos de segurança e proteção social.
+                        """)
+            st.markdown("<br>", unsafe_allow_html=True)
+
+            with st.container(border=True):
+                # Criar DataFrame com explicações sobre os níveis de correlação
+                explicacoes = pd.DataFrame({
+                    "Nível de Correlação": [
+                        "Correlação Forte Positiva",
+                        "Correlação Moderada Positiva",
+                        "Correlação Fraca Positiva",
+                        "Correlação Fraca Negativa",
+                        "Correlação Moderada Negativa",
+                        "Correlação Forte Negativa",
+                        "Sem Correlação"
+                    ],
+                    "Descrição": [
+                        "As variáveis aumentam juntas (0.7 a 1.0).",
+                        "As variáveis tendem a aumentar juntas (0.3 a 0.7).",
+                        "Pequena tendência de aumento conjunto (0.0 a 0.3).",
+                        "Pequena tendência de uma variável aumentar enquanto a outra diminui (-0.3 a 0.0).",
+                        "As variáveis tendem a se mover em direções opostas (-0.7 a -0.3).",
+                        "Uma variável aumenta enquanto a outra diminui significativamente (-1.0 a -0.7).",
+                        "Não há relação linear aparente entre as variáveis (próximo de 0)."
+                    ]
+                })
+
+                # Exibir o DataFrame no Streamlit
+                st.markdown("<b>Explicação dos Níveis de Correlação</b>", unsafe_allow_html=True)
+                st.dataframe(explicacoes, use_container_width=True, hide_index=True)
 
 
     with tab2:
@@ -1353,6 +1365,49 @@ elif tipo_analise == "Análise de Correlações":
             st.plotly_chart(fig11, use_container_width=True, margin=dict(t=10, b=10, l=10, r=10))
 
 
+        with st.expander("Explicação dos Achados", icon=":material/info:", expanded=True):
+            if tipo_apre == 'arm_fogo_apre':
+                st.markdown(""" 
+                            Os dados mostram que as **apreensões de armas de fogo** apresentam impactos distintos sobre diferentes categorias criminais. Entre os indicadores avaliados, apenas **Vias de Fato** e **Total de Furtos** exibem correlações estatisticamente significativas.
+                            - **Vias de Fato**: correlação de **0,4483** (p = 0,0061) - Indica que regiões com mais conflitos físicos também tendem a registrar maior número de apreensões, possivelmente devido a operações policiais motivadas por denúncias ou confrontos.
+
+                            - **Total de Furtos**: correlação de **0,6301** (p < 0,0001) - Sugere que o aumento das apreensões ocorre em contextos onde há maior atividade criminosa patrimonial, refletindo áreas mais problemáticas ou com policiamento mais intenso.
+                            
+                            Por outro lado, crimes mais graves — como **Homicídios**, **Feminicídios** e **Roubos** — **não apresentam correlações estatisticamente significativas**. Isso sugere que, no período analisado, o volume de armas removidas de circulação **não se traduz diretamente** em mudanças nesses delitos.
+                            
+                            O gráfico de dispersão entre apreensões e total de roubos reforça essa leitura:
+                            
+                            - **2022**: há uma tendência levemente negativa, indicando que mais apreensões podem estar associadas a redução de roubos nesses anos;
+                            - **2023 e 2024**: observa-se o oposto, com forte tendência positiva, sugerindo aumento simultâneo de apreensões e roubos.
+                            
+                            Esse comportamento **inconsistente ao longo dos anos** aponta para a influência de fatores externos, mudanças operacionais ou variações estruturais na dinâmica criminosa.
+                            
+                            As apreensões de armas parecem estar mais ligadas a **crimes de menor gravidade ou situacionais** do que a delitos letais ou altamente organizados. Para medir com precisão o impacto sobre crimes violentos, seria necessário recorrer a séries temporais mais longas e modelos causais que controlem variáveis contextuais.
+                            """)
+                
+            elif tipo_apre == 'arm_branc_apr':
+                st.markdown(""" 
+                            As apreensões de **armas brancas** mostram correlações significativamente positivas com quatro tipos de crimes: **homicídios**, **vias de fato**, **furtos** e **roubos**. A associação mais forte aparece em furtos e homicídios, sugerindo que regiões com maior circulação desse tipo de arma também registram níveis mais altos de violência letal e crimes patrimoniais. O fato de vias de fato também apresentar significância reforça a ideia de que conflitos interpessoais estão diretamente ligados ao porte ou uso de armas brancas.
+                            
+                            O gráfico de dispersão mostra uma tendência crescente em todos os anos analisados, indicando que, conforme aumentam as apreensões, também aumentam os registros de roubos — especialmente em 2024, onde a inclinação da linha é mais acentuada. Isso sugere que as apreensões podem estar ocorrendo em contextos de maior atividade criminosa geral, e não necessariamente reduzindo incidentes relacionados. As correlações positivas e estatisticamente significativas apontam para uma dinâmica em que apreensões refletem a intensidade da criminalidade local, funcionando mais como um indicador de cenário do que como fator redutor imediato.
+
+                            """)
+                
+            elif tipo_apre == 'drog_kg_apr':
+                st.markdown(""" 
+                            As apreensões de drogas em quantidade (kg) não apresentam correlação significativa com nenhum dos crimes analisados. Todas as associações possuem p-valores elevados, indicando ausência de relação estatisticamente detectável entre o volume apreendido e variações em homicídios, furtos, roubos ou conflitos físicos. Isso sugere que operações de grande porte contra o tráfico — que costumam resultar em apreensões de centenas ou milhares de quilos — não impactam diretamente os indicadores criminais de curto prazo.
+                            
+                            O gráfico reforça essa leitura: embora haja variação expressiva na quantidade apreendida, os pontos permanecem dispersos sem formar uma tendência clara. Em 2022 e 2023 há leve inclinação negativa, mas em 2024 a direção muda completamente, revelando que o comportamento anual é inconsistente. Dessa forma, apreensões volumosas parecem refletir ações pontuais, sem efeito direto na dinâmica cotidiana dos crimes analisados.
+                            """)
+                
+            elif tipo_apre == 'drog_un_apr':
+                st.markdown(""" 
+                            As apreensões de drogas medidas em unidades também não mostram correlações estatisticamente significativas com nenhum tipo de crime. Os coeficientes são baixos e os p-valores elevados, indicando que o número total de porções apreendidas não se relaciona de forma consistente com homicídios, furtos, roubos ou ocorrências de vias de fato.
+                            
+                            O gráfico de dispersão reforça a ausência de padrão: mesmo com apreensões variando de poucas unidades a mais de dez mil, os crimes analisados não acompanham essa oscilação. Em 2024 há uma leve tendência positiva entre apreensões e roubos, mas em 2022 e 2023 a tendência é negativa, evidenciando novamente um comportamento irregular. Isso sugere que apreensões de pequenas porções — geralmente associadas ao varejo de drogas — não exercem impacto direto sobre os indicadores criminais agregados no período estudado.
+                            """)
+            
+
     with tab3:
         st.markdown("##### <br>Análise de Sazonalidade das Ocorrências Atendidas", unsafe_allow_html=True)
     
@@ -1387,4 +1442,12 @@ elif tipo_analise == "Análise de Correlações":
                 ('Máximo', 'max')
             ]).round(2)
             st.dataframe(stats_mes, use_container_width=True)
+
+
+        with st.expander("Explicação dos Achados", icon=":material/info:", expanded=True):
+            st.markdown(""" 
+                        A análise sazonal mostra que o volume de ocorrências atendidas no DF segue um padrão relativamente estável ao longo do ano, mas com picos evidentes em alguns meses específicos. Fevereiro apresenta o maior nível médio de ocorrências, sugerindo um período de maior demanda operacional para as forças de segurança. Em contrapartida, setembro e novembro registram as menores médias, indicando meses estruturalmente menos intensos.
+                        
+                        A comparação entre média e mediana confirma que a distribuição mensal é consistente, com poucas distorções causadas por valores muito altos ou muito baixos. Já o desvio padrão revela maior variabilidade em meses como fevereiro, março e outubro, o que indica ocorrência de eventos atípicos ou operações pontuais que elevam o número de registros. No geral, os dados apontam para uma sazonalidade moderada, com meses de maior pressão operacional bem delimitados e outros de comportamento mais homogêneo.
+                        """)
 
