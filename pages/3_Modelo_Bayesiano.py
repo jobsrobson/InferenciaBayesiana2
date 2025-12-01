@@ -322,7 +322,7 @@ with tabs[0]:
             - **Desvio padrão:**  
               {cov_meta.get('stds', {}).get('arm_branc_apr', 0):.2f}
             
-            - **Coeficiente posterior \(\beta[0]\):**  
+            - **Coeficiente posterior \(Beta[0]\):**  
               0.093 (IC95%: -0.018 a 0.19)
             """)
 
@@ -406,7 +406,7 @@ with tabs[1]:
         st.info("""
         **Interpretação:** Meses com tons mais escuros indicam maior volume de ocorrências. 
         Observa-se uma tendência geral de redução de 2022 para 2024, com picos ocasionais 
-        (e.g., fevereiro/2024 com 25.459 ocorrências).
+        (exemplo: fevereiro/2024 com 25.459 ocorrências).
         """)
 
     st.divider()
@@ -577,7 +577,7 @@ Este gráfico evidencia que o **modelo Negative Binomial hierárquico é capaz d
         **Interpretação dos Resíduos:**
         - A maioria dos pontos observados está dentro do IC95%, indicando bom ajuste
         - Resíduos predominantemente simétricos em torno de zero
-        - Alguns outliers (e.g., fevereiro/2024) sugerem eventos atípicos não capturados pelas covariáveis
+        - Alguns outliers (exemplo: fevereiro/2024) sugerem eventos atípicos não capturados pelas covariáveis
         - Resíduos padronizados dentro de ±2 em sua maioria (boa especificação do modelo)
         """)
 
@@ -900,7 +900,7 @@ with tabs[5]:
         **Pergunta:** Qual a taxa mensal esperada de ocorrências criminais atendidas pela PMDF no Distrito Federal em 2025?
         """)
         
-        st.markdown(f"""
+        st.info(f"""
         **Resposta:** Com base no modelo Bayesiano hierárquico ajustado, a taxa mensal esperada de ocorrências 
         criminais para 2025 no Distrito Federal é de **{format_num(media_mediana)} ocorrências por mês**, 
         com intervalo de credibilidade de 95% entre **{format_num(media_low)}** e **{format_num(media_high)}** ocorrências.
@@ -916,12 +916,9 @@ with tabs[5]:
         st.markdown("**Escolha e Justificativa do Modelo Bayesiano**")
         
         st.markdown("""
-        #### Modelo da Família Exponencial Escolhido
-        
         Foi selecionado um **Modelo Linear Generalizado (GLM) Bayesiano Hierárquico** com distribuição 
-        **Negative Binomial** (Binomial Negativa), pertencente à família exponencial de distribuições.
-        
-        **Justificativas para a escolha:**
+        **Negative Binomial** (Binomial Negativa), pertencente à família exponencial de distribuições. Foram justificativas 
+        para a escolha:
         
         1. **Natureza dos dados:** Dados de contagem (número de ocorrências) com sobredispersão 
            (variância > média), característica comum em dados criminais
@@ -1127,7 +1124,6 @@ with tabs[5]:
         st.markdown("**Implicações Práticas e Recomendações**")
         
         st.markdown("""
-        #### Gestão Operacional da PMDF
         
         **Planejamento de Recursos:**
         1. **Alocação mensal otimizada:** Ajustar efetivo conforme previsões mensais
@@ -1146,7 +1142,7 @@ with tabs[5]:
         **Limitações e Cuidados:**
         1. Modelo assume continuidade de padrões históricos (sem eventos disruptivos)
         2. Covariável de armas brancas tem efeito não significativo → explorar outras variáveis preditoras
-        3. Outliers históricos (e.g., fev/2024) sugerem eventos não capturados pelo modelo
+        3. Outliers históricos (exemplo: fev/2024) sugerem eventos não capturados pelo modelo
         4. Previsões para 2025 têm maior incerteza (extrapolação out-of-sample)
         
         **Trabalhos Futuros:**
@@ -1172,7 +1168,7 @@ with tabs[5]:
         ✅ **Convergência adequada** (R-hat ≈ 1.00, ESS > 2.500)  
         ✅ **Ajuste satisfatório** (cobertura IC95% ≈ 95%, resíduos bem comportados)  
         
-        A **resposta ao problema de pesquisa** é clara e acionável: espera-se uma média de 
+        A **resposta ao problema de pesquisa** é clara: espera-se uma média de 
         **{format_num(media_mediana)} ocorrências mensais** em 2025, com variação sazonal moderada 
         e tendência de redução em relação aos anos anteriores. Esta informação fornece base 
         quantitativa robusta para o planejamento estratégico e operacional da PMDF.
