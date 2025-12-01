@@ -82,7 +82,7 @@ with st.container(border=True):
     with col2:
         st.markdown("""
         **🧮 Modelo**
-        - Família: Negative Binomial
+        - Família: Binomial Negativa
         - Estrutura: GLM Hierárquico
         - Inferência: MCMC (NUTS)
         """)
@@ -112,13 +112,9 @@ with st.container(border=True):
 with st.container(border=True):
     st.markdown("<b>Ferramentas Utilizadas</b>", unsafe_allow_html=True)
     st.markdown("""
-    Dados obtidos através do **Portal de Dados Abertos do Distrito Federal**, 
-    dos Relatórios Mensais de Produtividade da PMDF (2022-2024).
-    """)
-    st.markdown("""
     - **Linguagem de Programação:** Python  
     - **Bibliotecas:** PyMC, ArviZ, Pandas, NumPy, Plotly, Streamlit  
-    - **Ambiente de Desenvolvimento:** Jupyter Notebook, VS Code  
-    - **Plataforma de Visualização:** Streamlit  
+    - **Ambiente de Desenvolvimento:** Jupyter Notebook, Visual Studio Code no Linux Manjaro 
+    - **Plataforma de Visualização:** Streamlit Community Cloud 
     """)
 
